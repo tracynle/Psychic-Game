@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Psychic Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <script src="game.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h1>Psychic Game</h1>
+                <h2>Guess what letter I am thinking of...<span id="user-text"></span></h2>
+                <p> 
+                    <ul>
+                        <li>Wins: <span id="winsAdded"></span></li>
+                        <li>Losses:<span id="lossesAdded"></span></li>
+                        <li>Guesses left:<span id="guessLeft"></span></li>
+                        <li>Your Guesses So Far:</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var userText = document.getElementById("user-text");
+        var wins = 0;
+        var losses = 0;
+        var guessLeft = 8;
+        var guessRemain = "";
+
+        document.onkeyup = function(event) {
+            userText.textContent = event.key;
+            var int = getRandomInt(1, 26);
+            var retrievedLetter = letterMapping[int];
+
+            // Compare to see if guessed letter is equal to retrieved letter
+            if (event.key == retrievedLetter) {
+                wins = wins + 1;
+                var winsAdded  = document.getElementById("winAdded");
+                winsAdded.textContent = wins;
+
+            }
+            // Guessed wrong letter
+            else {
+                // Tally losses
+                losses = losses + 1;
+                var lossesAdded = document.getElementById("lossesAdded");
+                lossesAdded.textContent = losses;
+                
+                // Deduct remaining guesses
+                guessLeft = guessLeft - 1;
+                var guessLeft = document.getElementById("guessLeft");
+            }
+
+
+    
+        };
+
+        var letterMapping = {
+
+                1: 'a', 
+                2: 'b', 
+                3: 'c',
+                4: 'd',
+                5: 'e',
+                6: 'f',
+                7: 'g',
+                8: 'h',
+                9: 'i',
+                10: 'j',
+                11: 'k',
+                12: 'l',
+                13: 'm',
+                14: 'n',
+                15: 'o',
+                16: 'p',
+                17: 'q',
+                18: 'r',
+                19: 's',
+                20: 't',
+                21: 'u',
+                22: 'v',
+                23: 'w',
+                24: 'x',
+                25: 'y',
+                26: 'z',
+        };
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+
+
+</body>
+</html>
