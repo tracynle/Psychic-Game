@@ -3,14 +3,40 @@
 }
 
 body {
-    
+    font-family: 'Special Elite', cursive;
+    background-color: #000500;
 }
 
 img {
 }
 
 
+.psychic-header {
+    font-family: 'Special Elite', cursive;
+}
+
+
 h1 {
+    text-align: center;
+}
+
+img {
+   width: 100%;
+}
+
+
+
+  
+@media screen and (max-width: 980px) {
+
+
+}
+@media screen and (max-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 640px) {
 
 
 }
