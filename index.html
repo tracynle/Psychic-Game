@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- <script src="assets/javascript/game.js"></script> -->
+    <link rel="stylesheet" href="assets/css/reset.css"> 
 </head>
 <body>
     <div class="container main-section jumbotron">
         <div class="row">
             <div class="jumbotron">
                 <div class="psychic-header">
-                    <div class="col-sm-12"></div>
+                    <div class="col-sm-12">
                         <h1 id="blink">Psychic Game</h1>
                     </div>
+                </div>
         </div>
 
         <div class ="row">
@@ -46,102 +46,8 @@
     </div>
 
 
-    <script type="text/javascript">
-    //methods
-        var userText = document.getElementById("user-text");
-        var wins = 0;
-        var losses = 0;
-        var guessLeft = 8;
-        var lettersGuessed = "";
-        var lettersGiven = 8;
-
-    //Blinking text
-        var whitetime = 800;
-        var blacktime = 800;
-
-    //These can be as long as you desire in milliseconds
-        setTimeout(blackFunc,whitetime);
-        function blackFunc(){
-        document.getElementById("blink").style.color = "black";
-        setTimeout(whiteFunc,blacktime);
-        }
-        function whiteFunc(){
-        document.getElementById("blink").style.color = "white";
-        setTimeout(blackFunc,whitetime);
-        }
+    <script src="assets/javascript/game.js">
         
-
-        document.onkeyup = function(event) {
-            userText.textContent = event.key;
-            var int = getRandomInt(1, 26);
-            var retrievedLetter = letterMapping[int];
-            
-
-            // Compare to see if guessed letter is equal to retrieved letter
-            if (event.key == retrievedLetter) {
-                wins = wins + 1;
-                var winsAdded  = document.getElementById("winsAdded");
-                winsAdded.textContent = wins;
-
-            }
-            // Guessed wrong letter
-            else {
-                // Tally losses
-                losses = losses + 1;
-                var lossesAdded = document.getElementById("lossesAdded");
-                lossesAdded.textContent = losses;
-                
-                // Deduct remaining guesses
-                guessLeft = guessLeft - 1;
-                var guessLeftSpan = document.getElementById("guessLeft");
-                guessLeftSpan.textContent = guessLeft;
-
-                // Shows your typed letters
-                var lettersGuessedSpan = document.getElementById("lettersGuessed");
-                lettersGuessed = lettersGuessed + event.key + ", ";
-                lettersGuessedSpan.textContent = lettersGuessed;
-
-               
-            
-            }
-            //need to set a limit to number of guesses = 8. After number of tries, games stops. 
-           
-     
-        };
-
-        var letterMapping = {
-
-                1: 'a', 
-                2: 'b', 
-                3: 'c',
-                4: 'd',
-                5: 'e',
-                6: 'f',
-                7: 'g',
-                8: 'h',
-                9: 'i',
-                10: 'j',
-                11: 'k',
-                12: 'l',
-                13: 'm',
-                14: 'n',
-                15: 'o',
-                16: 'p',
-                17: 'q',
-                18: 'r',
-                19: 's',
-                20: 't',
-                21: 'u',
-                22: 'v',
-                23: 'w',
-                24: 'x',
-                25: 'y',
-                26: 'z',
-        };
-
-        function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
     </script> 
 
 
