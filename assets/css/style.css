@@ -6,22 +6,36 @@ body {
     font-family: 'Special Elite', cursive;
     background-color: #000500;
 }
-
-img {
+.container,
+.main-section,
+.jumbotron {
+    background-color: #000500;
 }
 
 
 .psychic-header {
     font-family: 'Special Elite', cursive;
-}
-
-
-h1 {
+    padding-bottom: 40px;
+    font-size: 50px;
     text-align: center;
 }
 
-img {
-   width: 100%;
+.palm-image {
+    float: left;
+    width: 100%;
+    clear: both;
+    padding-left: 100px;
+
+}
+
+h2, 
+.score-board {
+    color: white;
+    font-size: 20px;
+    float: right;
+
+#blink {
+    text-align: center;
 }
 
 
