@@ -22,9 +22,10 @@ body {
 
 .palm-image {
     float: left;
-    width: 100%;
-    clear: both;
-    padding-left: 100px;
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 25px;
 
 }
 
