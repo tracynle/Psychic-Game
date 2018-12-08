@@ -5,49 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Psychic Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
     <link rel="stylesheet" href="assets/css/reset.css"> 
 </head>
 <body>
-    <div class="container main-section jumbotron">
-        <div class="row">
-            <div class="jumbotron">
-                <div class="psychic-header">
-                    <div class="col-sm-12">
-                        <h1 id="blink">Psychic Game</h1>
-                    </div>
-                </div>
-        </div>
+    <header>
+        <h1 class="neon-sign" contenteditable spellcheck="false">Psychic Game</h1>
+    </header>
 
-        <div class ="row">
-            <div class="col-sm-3">
-                <img src="assets/images/palm-reading.jpg" class="palm-image" class="img-fluid" alt="Responsive image">
+    <div class="column">
+        <aside>
+            <h2 class="score-board-list">Guess what letter I am thinking of...<span id="user-text"></span></h2>
+           <div id="position-guess">
+                <p> 
+                    <ul class="score-board-list">
+                        <li>Wins: <span id="winsAdded"></span></li>
+                        <li>Losses: <span id="lossesAdded"></span></li>
+                        <li>Guesses left: <span id="guessLeft"></span></li>
+                        <li>Your Guesses So Far: <span id="lettersGuessed"></span></li>
+                    </ul>
+                </p>
             </div>
-
-            <div class="col-md-3">
-                <div class="score-board">
-                    <h2>Guess what letter I am thinking of... <span id="user-text"></span></h2>
-                    <br><br>
-                        <p> 
-                            <ul class="score-board-list">
-                                <li>Wins: <span id="winsAdded"></span></li>
-                                <li>Losses: <span id="lossesAdded"></span></li>
-                                <li>Guesses left: <span id="guessLeft"></span></li>
-                                <li>Your Guesses So Far: <span id="lettersGuessed"></span></li>
-
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </aside>
     </div>
 
-
     <script src="assets/javascript/game.js">
-        
+
     </script> 
 
 
