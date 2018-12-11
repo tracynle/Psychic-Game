@@ -5,7 +5,6 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
     font-family: 'Quicksand', sans-serif;
     background: #000;
@@ -80,7 +79,7 @@ from one set of CSS styles to another.*/
         0 0 4rem var(--neon-border-color),
         inset 0 0 4rem var(--neon-border-color);
     }
-    20%, 24%, 55%
+        20%, 24%, 55%
     {
         text-shadow: none;
         box-shadow: none;
@@ -94,10 +93,12 @@ from one set of CSS styles to another.*/
     padding-top: 10px;
     font-family: 'Kosugi', sans-serif;
     text-align: left;
-
-    
 }
 
+.column {
+    width: 610px;
+    margin-top: 250px;
+}
 
 @media screen and (max-width: 980px) {
 
@@ -111,4 +112,3 @@ from one set of CSS styles to another.*/
 @media screen and (max-width: 640px) {
 
 }
-

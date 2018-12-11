@@ -5,20 +5,20 @@ var losses = 0;
 var guessLeft = 9;
 var lettersGuessed = "";
 
-//Blinking text
-var whitetime = 800;
-var blacktime = 800;
+// //Blinking text
+// var whitetime = 800;
+// var blacktime = 800;
 
-//These can be as long as you desire in milliseconds
-setTimeout(blackFunc,whitetime);
-function blackFunc(){
-document.getElementById("blink").style.color = "black";
-setTimeout(whiteFunc,blacktime);
-}
-function whiteFunc(){
-document.getElementById("blink").style.color = "white";
-setTimeout(blackFunc,whitetime);
-}
+// //These can be as long as you desire in milliseconds
+// setTimeout(blackFunc,whitetime);
+// function blackFunc(){
+// document.getElementById("blink").style.color = "black";
+// setTimeout(whiteFunc,blacktime);
+// }
+// function whiteFunc(){
+// document.getElementById("blink").style.color = "white";
+// setTimeout(blackFunc,whitetime);
+// }
 
 
 document.onkeyup = function(event) {
@@ -79,12 +79,8 @@ document.onkeyup = function(event) {
             var lettersGuessedSpan = document.getElementById("lettersGuessed");
             lettersGuessed = lettersGuessed + event.key + ", ";
             lettersGuessedSpan.textContent = lettersGuessed;
-
         }
-    
     }
-    
-
 };
 
 var letterMapping = {
