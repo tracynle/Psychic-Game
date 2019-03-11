@@ -5,11 +5,7 @@ var losses = 0;
 var guessLeft = 9;
 var lettersGuessed = "";
 
-//Blinking text
-var whitetime = 800;
-var blacktime = 800;
-
-//These can be as long as you desire in milliseconds
+// Psychic Game neon sign:
 setTimeout(blackFunc,whitetime);
 function blackFunc(){
 document.getElementById("blink").style.color = "black";
@@ -20,7 +16,8 @@ document.getElementById("blink").style.color = "white";
 setTimeout(blackFunc,whitetime);
 }
 
-
+// On key up function that only recognizes 26 letters
+// of the alphabet to be right or wrong inputs to guess
 document.onkeyup = function(event) {
 
     userText.textContent = event.key;
@@ -78,12 +75,8 @@ document.onkeyup = function(event) {
             var lettersGuessedSpan = document.getElementById("lettersGuessed");
             lettersGuessed = lettersGuessed + event.key + ", ";
             lettersGuessedSpan.textContent = lettersGuessed;
-
         }
-    
     }
-    
-
 };
 
 var letterMapping = {
