@@ -24,9 +24,10 @@ document.onkeyup = function(event) {
     var int = getRandomInt(1, 26);
     var retrievedLetter = letterMapping[int];
 
-    // Return early if not key between a-z
+    // Return early if not key between a-z. allows the input to only show letters on the screen, 
+    //not characters. Code is called: reget
     var key = event.key;
-    var alphaOnly = /^[a-zA-Z]$/;
+    var alphaOnly = /^[a-zA-Z]$/; 
     if(!alphaOnly.test(key)) {
     return;
     }
