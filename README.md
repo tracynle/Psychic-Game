@@ -7,3 +7,5 @@ You have 9 tries to guess the letters correctly. If you get it right, you win a 
 
 ## Demo
 ![Psychic Game](demo/psychic_game.gif)
+
+Click here to play the game: [Psychic Game]( https://tracynle.github.io/Psychic-Game/)
