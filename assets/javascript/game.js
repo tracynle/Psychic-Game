@@ -5,16 +5,7 @@ var losses = 0;
 var guessLeft = 9;
 var lettersGuessed = "";
 
-// Psychic Game neon sign:
-setTimeout(blackFunc,whitetime);
-function blackFunc(){
-document.getElementById("blink").style.color = "black";
-setTimeout(whiteFunc,blacktime);
-}
-function whiteFunc(){
-document.getElementById("blink").style.color = "white";
-setTimeout(blackFunc,whitetime);
-}
+
 
 // On key up function that only recognizes 26 letters
 // of the alphabet to be right or wrong inputs to guess
