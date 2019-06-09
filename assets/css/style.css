@@ -9,6 +9,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     background: #000;
     overflow: hidden;
+   
 
 }
 
@@ -49,6 +50,7 @@ h1, .neon-sign {
  h1::selection  {
     color: var(--neon-text-color);
     background-color: var(--neon-border-color);
+
 }
 
 h2, 
@@ -57,6 +59,7 @@ h2,
     font-size: 20px;
     float: right;
     margin-left: 20px;
+    
 }
 
 /* @keyframs means that the animation is created by gradually changing 
@@ -94,7 +97,7 @@ from one set of CSS styles to another.*/
 .position-guess {
     font-size: 30px;
     color: white;
-    padding-top: 10px;
+    padding-top: 60px;
     font-family: 'Kosugi', sans-serif;
     text-align: left;
 }
